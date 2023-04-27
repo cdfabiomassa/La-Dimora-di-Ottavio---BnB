@@ -1,0 +1,12 @@
+import './bootstrap';
+import 'bootstrap/dist/js/bootstrap';
+import './owl.carousel.min';
+import './popper.min';
+import './magnific-popup-options';
+import './jquery-migrate-3.0.0';
+import './jquery-3.2.1.min';
+import './jquery.magnific-popup.min';
+import './jquery.stellar.min';
+import './jquery.waypoints.min';
+import './bootstrap.min';
+import './main';
