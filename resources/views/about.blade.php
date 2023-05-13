@@ -6,8 +6,8 @@
             <div class="col-md-12 text-center">
 
               <div class="mb-5 element-animate">
-                <h1>About La Dimora di Ottavio</h1>
-                <p>My house is your home</p>
+                <h1>{{__('ui.about')}}</h1>
+                <p>{{__('ui.myhouseisyourhome')}}</p>
               </div>
 
             </div>
@@ -18,86 +18,45 @@
 
       <section class="site-section">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-4">
+          <div class="row align-items-center ">
+            <div class="col-md-5">
               <div class="heading-wrap  element-animate">
-                <h4 class="sub-heading">Stay with our luxury rooms</h4>
-                <h2 class="heading">Our Story</h2>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo similique natus, a recusandae? Dolorum, unde a quibusdam est? Corporis deleniti obcaecati quibusdam inventore fuga eveniet! Qui delectus tempore amet!</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo similique natus, a recusandae? Dolorum, unde a quibusdam est? Corporis deleniti obcaecati quibusdam inventore fuga eveniet! Qui delectus tempore amet!</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo similique natus, a recusandae? Dolorum, unde a quibusdam est? Corporis deleniti obcaecati quibusdam inventore fuga eveniet! Qui delectus tempore amet!</p>
-
+                <h4 class="sub-heading">{{__('ui.comesiamonati')}}</h4>
+                <h2 class="heading">{{__('ui.story')}}</h2>
+                <p class="text-justify">{{__('ui.ourstory1')}}</p>
+                <p class="text-justify">{{__('ui.ourstory2')}}</p>
+                <p class="text-justify">{{__('ui.ourstory3')}}</p>
               </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-7">
-              <img src="images/f_img_1.png" alt="Image placeholder" class="img-md-fluid">
+            <div class="col-md-6">
+              <img src="/imgblade/f_img_1.png" alt="Image placeholder" class="img-md-fluid">
             </div>
           </div>
         </div>
       </section>
       <!-- END section -->
 
+      <section class="site-section d-flex ">
+        <div class="container ">
+          <div class="row align-items-center ">
 
-
-
-
-      <section class="site-section bg-light">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-md-12 heading-wrap text-center">
-              <h4 class="sub-heading">Our Kind Staff</h4>
-                <h2 class="heading">Our Staff</h2>
+            <div class="col-md-6">
+              <img src="/imgblade/Carbonara.jpg" alt="Image placeholder" class="img-md-fluid">
             </div>
-          </div>
-          <div class="row ">
-            <div class="col-md-4">
-              <div class="post-entry">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid">
-                <div class="body-text">
-                  <div class="category">Staff</div>
-                  <h3 class="mb-3"><a href="#">Michelle Aguilar</a></h3>
-                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum deserunt illo quis similique dolore voluptatem culpa voluptas rerum, dolor totam.</p>
-                  <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read Bio</a></p>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+              <div class="heading-wrap  element-animate">
+                <div class="carbonara p-lg-5 mt-5 mt-lg-0" >
+
+                <h4 class="sub-heading">{{__('ui.aboutcarbonara')}}</h4>
+                <h2 class="heading texthistory">{{__('ui.unpodistoria')}}</h2>
+                <p class="text-justify texthistory">{{__('ui.history1')}}</p>
+                <p class="text-justify texthistory">{{__('ui.history2')}}</p>
+                <p class="text-justify texthistory">{{__('ui.history3')}}</p>
+                <p class="text-justify texthistory">{{__('ui.history4')}}</p>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="post-entry">
-                <img src="images/person_2.jpg" alt="Image placeholder" class="img-fluid">
-                <div class="body-text">
-                  <div class="category">Staff</div>
-                  <h3 class="mb-3"><a href="#">Chris Standworth</a></h3>
-                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum deserunt illo quis similique dolore voluptatem culpa voluptas rerum, dolor totam.</p>
-                  <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read Bio</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="post-entry">
-                <img src="images/person_3.jpg" alt="Image placeholder" class="img-fluid">
-                <div class="body-text">
-                  <div class="category">Cook</div>
-                  <h3 class="mb-3"><a href="#">Rob McDonald</a></h3>
-                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum deserunt illo quis similique dolore voluptatem culpa voluptas rerum, dolor totam.</p>
-                  <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read Bio</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END section -->
-
-      <section class="section-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/img_5.jpg);">
-        <div class="container">
-          <div class="row justify-content-center align-items-center intro">
-            <div class="col-md-9 text-center element-animate">
-              <h2>Relax and Enjoy your Holiday</h2>
-              <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quidem tempore expedita facere facilis, dolores!</p>
-              <div class="btn-play-wrap"><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn-play popup-vimeo "><span class="ion-ios-play"></span></a></div>
             </div>
           </div>
         </div>

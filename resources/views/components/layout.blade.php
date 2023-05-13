@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+
+    <!-- Pannellum library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
+    integrity="sha512-UoT/Ca6+2kRekuB1IDZgwtDt0ZUfsweWmyNhMqhG4hpnf7sFnhrLrO0zHJr2vFp7eZEvJ3FN58dhVx+YMJMt2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -36,33 +45,55 @@
               <li class="nav-item">
                 <a class="nav-link {{(Route::currentRouteName()=='homepage') ? 'active': ''}}" href="{{ route('homepage') }}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link {{(Route::currentRouteName()=='rooms') ? 'active': ''}}" href="{{ route('rooms') }}">Rooms</a>
-              </li>
-              {{-- <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="{{ route('rooms') }}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rooms</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="rooms.html">Room Videos</a>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{(Route::currentRouteName()=='rooms' ) ? 'active': ''}}" href="rooms.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('ui.rooms')}}</a>
+                <div class="dropdown-menu mt-1" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="{{ route('rooms') }}">{{__('ui.viewall')}}</a>
                   <a class="dropdown-item" href="rooms.html">Presidential Room</a>
                   <a class="dropdown-item" href="rooms.html">Luxury Room</a>
                   <a class="dropdown-item" href="rooms.html">Deluxe Room</a>
                 </div>
-              </li> --}}
+              </li>
 
               <li class="nav-item">
                 <a class="nav-link {{(Route::currentRouteName()=='about') ? 'active': ''}}" href="{{ route('about') }}">About</a>
               </li>
 
               <li class="nav-item">
-                <p class="my-0 py-0" style="margin: 0px 7px 0px 7px; color:rgba(255, 255, 255, 0.5)">|</p>
+                <a class="nav-link {{(Route::currentRouteName()=='contactUs') ? 'active': ''}}" href="{{ route('contactUs') }}">{{__('ui.contactus')}}</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link {{(Route::currentRouteName()=='contactUs') ? 'active': ''}}" href="{{ route('contactUs') }}">Contact us</a>
+                <p class="my-0 py-0" style="margin: 0px 7px 0px 7px; color:rgba(255, 255, 255, 0.5)">|</p>
+              </li>
+
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('ui.language')}}</a>
+                <div class="dropdown-menu mt-1" aria-labelledby="dropdown04">
+                  <a class="dropdown-item  px-3" href="rooms.html">
+                    <form action="{{route('setLocale', 'it')}}" class="d-inline  m-0 p-0" method="post">
+                      @csrf
+                      <button type="submit bg-transparent m-0 p-0" style="border: 0px; background:transparent">IT</button>
+                    </form>
+                  </a>
+                  <a class="dropdown-item  px-3" href="rooms.html">
+                    <form action="{{route('setLocale', 'en')}}" class="d-inline  m-0 p-0" method="post">
+                      @csrf
+                      <button type="submit bg-transparent m-0 p-0" style="border: 0px; background:transparent">EN</button>
+                    </form>
+                  </a>
+                  <a class="dropdown-item  px-3" href="rooms.html">
+                    <form action="{{route('setLocale', 'es')}}" class="d-inline  m-0 p-0" method="post">
+                      @csrf
+                      <button type="submit bg-transparent m-0 p-0" style="border: 0px; background:transparent">ES</button>
+                    </form>
+                  </a>
+                </div>
               </li>
 
                <li class="nav-item cta">
-                <a class="nav-link mt-0 {{(Route::currentRouteName()=='booknow') ? 'active': ''}}" href="{{ route('booknow') }}"><span>Book Now</span></a>
+                <a class="nav-link mt-0 {{(Route::currentRouteName()=='booking') ? 'active': ''}}" href="{{ route('booking') }}"><span>{{__('ui.booknow')}}</span></a>
               </li>
             </ul>
 
@@ -74,29 +105,26 @@
 
     {{$slot}}
 
+    {{-- google maps --}}
+    <div id="map"></div>
+
     {{-- footer --}}
     <footer class="site-footer">
-      <div class="container">
-        <div class="row mb-5">
+      <div class="container containerfooter">
+        <div class="row mb-sm-0 mb-5">
           <div class="col-md-4">
-            <h3>Phone Support</h3>
-            <p>24/7 Call us now.</p>
-            <p class="lead"><a href="tel://">+ 1 332 3093 323</a></p>
+            <h3>{{__('ui.phonesupport')}}</h3>
+            <p>24/7 {{__('ui.callusnow')}}</p>
+            <p class="">+39 333 747 8964</p>
           </div>
-          <div class="col-md-4">
-            <h3>Connect With Us</h3>
-            <p>We are socialized. Follow us</p>
-            <p>
-              <a href="#" class="pl-0 p-3"><span class="fa fa-facebook"></span></a>
-              <a href="#" class="p-3"><span class="fa fa-twitter"></span></a>
-              <a href="#" class="p-3"><span class="fa fa-instagram"></span></a>
-              <a href="#" class="p-3"><span class="fa fa-vimeo"></span></a>
-              <a href="#" class="p-3"><span class="fa fa-youtube-play"></span></a>
-            </p>
+          <div class="col-md-4 mt-5 mt-md-0">
+            <h3>{{__('ui.hereweare')}}</h3>
+            <p>Via vittorio veneto 25/c</p>
+            <p>70131, Bari</p>
           </div>
-          <div class="col-md-4">
-            <h3>Connect With Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, odio.</p>
+          <div class="col-md-4 mt-5 mt-md-0">
+            <h3>{{__('ui.connectwhithus')}}</h3>
+            <p>{{__('ui.newsletter')}}</p>
             <form action="#" class="subscribe">
               <div class="form-group">
                 <button type="submit"><span class="ion-ios-arrow-thin-right"></span></button>
@@ -106,13 +134,7 @@
             </form>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Fabio Massa | f.massa5@libero.it </a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </div>
-        </div>
+
       </div>
     </footer>
     {{-- end footer --}}
@@ -128,8 +150,22 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"
+    integrity="sha512-EmZuy6vd0ns9wP+3l1hETKq/vNGELFRuLfazPnKKBbDpgZL0sZ7qyao5KgVbGJKOWlAFPNn6G9naB/8WnKN43Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/magnific-popup-options.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    {{-- google maps --}}
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTAn5NqBCBcaL2Sw-VNdc5koj8dBWjMsU&callback=initMap"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 

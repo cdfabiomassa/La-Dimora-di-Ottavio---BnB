@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomsController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SubscriberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +17,27 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+// Homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
+// Generiche
 Route::get('/about', [PublicController::class, 'about'])->name('about');
-Route::get('/booknow', [PublicController::class, 'booknow'])->name('booknow');
 Route::get('/rooms', [PublicController::class, 'rooms'])->name('rooms');
 
+Route::get('/booking', [PublicController::class, 'booking'])->name('booking');
+Route::get('/createbooking', [PublicController::class, 'createbooking'])->name('createbooking');
+
+// Mandare un messaggio
 Route::get('/contactUs', [ContactController::class, 'contactUs'])->name('contactUs');
 Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
 
-Auth::routes();
+// Lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+// Route::get('/subscribe', [SubscriberController::class, 'subscribe']);
+
+// Camere
+Route::get('/camera1', [RoomsController::class, 'camera1'])->name('camera1');

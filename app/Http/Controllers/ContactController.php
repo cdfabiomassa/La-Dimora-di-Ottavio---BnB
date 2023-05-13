@@ -14,11 +14,6 @@ class ContactController extends Controller
     }
 
     public function sendEmail (Request $request) {
-
-        // $this->validate($request,[
-        //     'phone' => 'min:11|numeric',
-        // ]);
-
         $rules = [
             'phone' => 'numeric|min:11',
         ];
@@ -30,7 +25,6 @@ class ContactController extends Controller
 
         $this->validate($request, $rules, $customMessages);
 
-
         $details = [
             'name' => $request->name,
             'email' => $request->email,
@@ -38,9 +32,7 @@ class ContactController extends Controller
             'message' => $request->message
         ];
 
-
-
-        Mail::to('fabiioo.m.95@gmail.com')->send(new ContactMail($details));
+        Mail::to('f.massa5@libero.it')->send(new ContactMail($details));
         return back();
     }
 

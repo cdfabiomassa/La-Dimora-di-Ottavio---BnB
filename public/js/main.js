@@ -179,3 +179,80 @@
 
 
 })(jQuery);
+
+
+
+// google maps
+function initMap(){
+  var options = {
+    center : {lat: 41.156566, lng: 16.766063},
+    zoom : 16
+  }
+
+  map = new google.maps.Map(document.getElementById("map"), options);
+
+  const marker = new google.maps.Marker({
+    position:{lat: 41.156566, lng: 16.766063},
+    map:map,
+    label: '8',
+    title: "La Dimora di Ottavio",
+  });
+
+  const detailWindow = new google.maps.InfoWindow({
+    content: '<div class="p-3"><p class=" text-uppercase m-0 pb-1 fw-bolder">La Dimora di Ottavio</p><p class="text-center m-0 p-0">Via vittorio veneto 25/c</p></div>'
+  });
+
+  marker.addListener("mouseover", () => {
+    detailWindow.open(map, marker);
+  })
+
+// function haversine_distance(mk1, mk2) {
+//   var R = 3958.8; // Radius of the Earth in miles
+//   var rlat1 = mk1.position.lat() * (Math.PI/180); // Convert degrees to radians
+//   var rlat2 = mk2.position.lat() * (Math.PI/180); // Convert degrees to radians
+//   var difflat = rlat2-rlat1; // Radian difference (latitudes)
+//   var difflon = (mk2.position.lng()-mk1.position.lng()) * (Math.PI/180); // Radian difference (longitudes)
+
+//   var d = 2 * R * Math.asin(Math.sqrt(Math.sin(difflat/2)*Math.sin(difflat/2)+Math.cos(rlat1)*Math.cos(rlat2)*Math.sin(difflon/2)*Math.sin(difflon/2)));
+//   return d;
+// }
+
+// var map;
+// function initMap() {
+//   // The map, centered on Central Park
+//   const center = {lat: 41.156566, lng: 16.766063};
+//   const options = {zoom: 15, scaleControl: true, center: center};
+//   map = new google.maps.Map(
+//       document.getElementById('map'), options);
+//   // Locations of landmarks
+//   const dakota = {lat: 41.156566, lng: 16.766063};
+//   const frick = {lat: 41.126852, lng: 16.871915};
+//   // The markers for The Dakota and The Frick Collection
+//   var mk1 = new google.maps.Marker({position: dakota, map: map});
+//   var mk2 = new google.maps.Marker({position: frick, map: map});
+
+//   // Draw a line showing the straight distance between the markers
+//   var line = new google.maps.Polyline({path: [dakota, frick], map: map});
+
+// // Calculate and display the distance between markers
+// var distance = haversine_distance(mk1, mk2);
+// document.getElementById('msg').innerHTML = "Distance between markers: " + distance.toFixed(2) + " mi.";
+}
+
+
+
+pannellum.viewer('panorama-360-view', {
+  "type": "equirectangular",
+  "panorama": "https://i.ibb.co/6PGHKkT/360-image.jpg",
+  "autoLoad": true,
+
+})
+
+
+function mouseOver() {
+  document.getElementById("view").style.display = "none";
+}
+
+function mouseOut() {
+  document.getElementById("view").style.display = "block";
+}

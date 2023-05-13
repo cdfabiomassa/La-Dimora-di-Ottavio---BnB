@@ -1,0 +1,46 @@
+<?php
+return[
+    'welcometolaDimoradiOttavio'=>'Benvenuto nella Dimora di Ottavio',
+    'myhouseisyourhome'=>'La mia casa è la tua',
+    'rooms'=>'Camere',
+    'language'=>'Lingua',
+    'contactus'=>'Contattaci',
+    'booknow'=>'Prenota',
+    'stayandenjoy'=>'Pensato per tutti',
+    'ourstory'=>'La nostra storia',
+    'moreaboutus'=>'Su di noi',
+    'phonesupport'=>'Assistenza telefonica',
+    'callusnow'=>'Chiamaci in qualsiasi momento',
+    'hereweare'=>'Dove ci troviamo',
+    'connectwhithus'=>'Rimani in contatto con noi',
+    'newsletter'=>'Iscriviti alla nostra newsletter per non perdere le migliori offerte',
+    'descriptionhome'=>'La struttura, situata nel pieno centro storico di Carbonara di Bari, dispone di tre camere ampie e luminose dotate di arredamento completo e confortevole con frigobar, tv, aria condizionata, wi-fi gratuito, servizi privati e ingresso indipendente, arredate con gusto ed eleganza. Nel servizio è inclusa la prima colazione e il riassetto giornaliero della camera. La sua posizione, a 15 minuti dall’aeroporto e 7 km dallo svincolo autostradale di Bari Nord, risponde a qualsiasi esigenza di spostamento',
+    'staywithourluxuryrooms'=>'Goditi le nostre camere',
+    'ourromms'=>'Le nostre camere',
+    'discoverourrooms'=>"Dai un'occhiata",
+    'about'=>'Su la Dimora di Ottavio',
+    'story'=>'Come siamo nati',
+    'comesiamonati'=>'Pensato per tutti',
+    'unpodistoria'=>'Un po di storia',
+    'aboutcarbonara'=>'Su Carbonara di Bari',
+    'history1'=>'Il borgo di Carbonara nasce nel lontano 1156, dopo la distruzione di Bari da parte di Guglielmo il Malo che costrinse i baresi a rifugiarsi in campagna per creare una nuova città. Comune autonomo fino al 1928, si è gradualmente integrato nel tessuto urbano del capoluogo pugliese affiancando al proprio centro storico vaste zone residenziali.',
+    'history2'=>'Nel 1929 infatti, un regio decreto stabilì che sarebbe diventato una frazione di Bari e nel 1970, a seguito di una decisione del consiglio comunale, perse anche lo status di frazione per essere trasformato in un semplice quartiere metropolitano. È ben nota per la promozione della cucina locale e dei prodotti tipici del territorio, come le olive da tavola e l’olio extra-vergine d’oliva.',
+    'history3'=>'Come tutti i paesi della provincia anche Carbonara ha un suo giardino pubblico che funge da fulcro per la vita del centro abitato. Si tratta di un’area di cemento quadrata e circondata da numerose palme dove i pensionati si riuniscono per giocare a carte e i ragazzi per improvvisare infuocate partite di pallone. Il santo patrono è San Michele Arcangelo. Tutto il borgo è costellato di edicole dedicate a Lui dedicate, con la sua caratteristica spada pronta a uccidere il drago; ad ottobre grandi feste sono organizzate in suo onore.',
+    'history4'=>'San Michele è venerato nella chiesa matrice di Santa Maria del Fonte. L’edificio religioso è raggiungibile incuneandosi in una delle tante strette viuzze che caratterizzano la parte più vecchia del borgo: un reticolo di stradine a chianche e di basse palazzine con minuscoli balconi.',
+
+    'ourstory1'=>'Il Bed & Breakfast “La Dimora di Ottavio”, situato nel pieno centro storico di Carbonara di Bari, dista pochi km dal capoluogo pugliese, 15 minuti dall’aeroporto e 7 km dallo svincolo autostradale di Bari Nord. La sua posizione ottimale risponde a qualsiasi esigenza di spostamento.',
+    'ourstory2'=>'Un tempo residenza abitativa dei miei nonni paterni, è un caratteristico palazzotto degli inizi ‘900 completamente rinnovato e ristrutturato, che prende il nome da mio nonno Ottavio e dalla storia famigliare del paese.
+    Nel corso degli anni sono state apportate poche modifiche, tuttavia mai strutturali; l’attuale restauro, terminato a giugno 2023, ha avuto l’obbiettivo di riportarlo al suo aspetto decoroso e ai fasti originari.',
+    'ourstory3'=>'I lineamenti architettonici tipici della zona, la cura dei dettagli, il senso dell’ospitalità, la vicinanza al capoluogo pugliese, gli arredi pensati per soddisfare il comfort e l’eleganza che si possono desiderare anche quando si è lontani da casa, vi regaleranno un soggiorno accogliente e caratteristico.',
+
+    'featurerooms'=>'Camere in primo piano',
+    'anyrooms'=>'Qualche suggerimento',
+
+    'viewall' => 'Tutte le camere',
+    'contactform'=>'Modulo di contatto',
+    'name'=>'Nome',
+    'phone'=>'Telefono',
+    'writemessage'=>'Scrivi un messaggio',
+    'paragraph'=>'Per qualsiasi richiesta o feedback',
+    'feedback'=>'I tuoi Feedback sono importanti per migliorare il nostro servizio  ed essere sempre più vicini alle tue esigenze e suggerimenti.'
+];
